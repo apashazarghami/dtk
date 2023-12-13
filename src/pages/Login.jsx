@@ -55,8 +55,8 @@ const Login = () => {
         <div className={styles.container}>
             <img className={styles.logoImage} src={logoImage} alt="درخشان توپال کارمانیا" loading="lazy" />
             <form onSubmit={clickHandler} className={styles.form}>
-                <TextInput {...{ value: username, name: 'username', changeHandler, type: 'text', placeholder: 'نام کاربری' }}  />
-                <TextInput {...{ value: password, name: 'password', changeHandler, type: 'password', placeholder: 'کلمه عبور' }} />
+                <TextInput {...{ value: username, name: 'username', setInformation, type: 'text', placeholder: 'نام کاربری' }}  />
+                <TextInput {...{ value: password, name: 'password', setInformation, type: 'password', placeholder: 'کلمه عبور' }} />
                 <button type="submit" className={styles.submitButton}>ورود</button>
             </form>
         </div>

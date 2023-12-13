@@ -1,7 +1,7 @@
 .container {
     background: #f8f8f8;
-    height: 60%;
-    width: 25%;
+    min-height: 23rem;
+    min-width: 17rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

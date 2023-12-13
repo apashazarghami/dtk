@@ -5,6 +5,7 @@ import styles from './Dashboard.module.css'
 import { notify } from './Login'
 import axios from 'axios'
 import { useEffect } from 'react'
+import AddAsset from '../components/AddAsset'
 
 const Dashboard = () => {
     const [cookies, , removeCookie] = useCookies(['token']);
@@ -37,13 +38,23 @@ const Dashboard = () => {
     }
 
     const receiveHandler = async () => {
-        const { data } = await axios.get('http://dtk.edlant.ir/api/AssetGroups/GetAll', {
-            headers: {
-                Authorization: `Bearer ${cookies.token}`,
-            }
-        })
+        try {
+            const { data: assetGroup } = await axios.get('http://dtk.edlant.ir/api/AssetGroups/GetAll', {
+                headers: {
+                    Authorization: `Bearer ${cookies.token}`,
+                }
+            })
+            assetGroup.data.forEach(item => console.log(item))
 
-        console.log(data)
+            const { data: asset } = await axios.get('http://dtk.edlant.ir/api/Assets/GetAll', {
+                headers: {
+                    Authorization: `Bearer ${cookies.token}`,
+                }
+            })
+            asset.data.forEach(item => console.log(item))
+        } catch(err) {
+            console.log(err)
+        }
     }
 
     return(
@@ -52,6 +63,7 @@ const Dashboard = () => {
                 <button className={styles.logoutButton} onClick={clickHandler}>خروج</button>
                 <button className={styles.logoutButton} onClick={receiveHandler}>دریافت</button>
             </div>
+            <AddAsset />
         </div>
     )
 }
