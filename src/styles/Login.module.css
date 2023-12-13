@@ -1,0 +1,34 @@
+.container {
+  background: #f8f8f8;
+  min-height: 23rem;
+  min-width: 17rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(150, 150, 150, 0.5);
+}
+
+.logoImage {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 0.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.submitButton {
+  background: #0086cb;
+  color: #e6f5f3;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 0.4rem 2.8rem;
+  cursor: pointer;
+}

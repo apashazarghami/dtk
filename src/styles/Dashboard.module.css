@@ -1,0 +1,19 @@
+.container {
+  margin: 1rem 2rem;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.logoutButton {
+  display: flex;
+  color: #0086cb;
+  background: #f8f8f8;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 0.4rem 2.8rem;
+  cursor: pointer;
+}
