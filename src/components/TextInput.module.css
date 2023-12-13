@@ -1,0 +1,18 @@
+.textIinput {
+    margin-bottom: 0.5rem;
+    border: 1px solid #dcddde;
+    outline: 1px solid #dcddde;
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+    width: 14rem;
+}
+
+.textIinput:focus {
+    border: 1px solid #62bbef;
+    outline: 1px solid #62bbef;
+    background: #f2fafe;
+}
+
+.textIinput::placeholder {
+    color: #c0c0c0;
+}
